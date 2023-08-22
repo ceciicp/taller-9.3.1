@@ -20,12 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     btnAdd.addEventListener("click", () => {
-        let data = document.getElementById("item").value;
-        if (data != ""){
-            listado.push(data);
+        let data = document.getElementById("item");
+        if (data.value != ""){
+            listado.push(data.value);
             localStorage.setItem("lista", JSON.stringify(listado));
-            listar(data);
-            data = "";
+            listar(data.value);
+            data.value = "";
         }
     })
 
